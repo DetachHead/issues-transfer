@@ -4,7 +4,13 @@
   "description": "Transfer issues from one Github repo to another",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint:check": "eslint . --ext .ts",
+    "lint:fix": "npm run lint:check -- --fix",
+    "format:check": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "build": "rimraf ./dist && tsc -p tsconfig.build.json",
+    "check": "npm run build && npm run lint:check && npm run format:check",
+    "main": "npm run build && node dist/bin/issues-transfer.js"
   },
   "bin": {
     "issues-transfer": "bin/issues-transfer.js"
@@ -25,10 +31,25 @@
   },
   "homepage": "https://github.com/jeffandersen/issues-transfer",
   "dependencies": {
-    "async": "0.9.0",
-    "github": "0.2.2",
-    "lodash": "2.4.1",
-    "minimist": "1.1.0",
-    "prompt": "0.2.14"
+    "@detachhead/ts-helpers": "^11.2.0",
+    "@octokit/rest": "^19.0.3",
+    "async": "^3.2.4",
+    "lodash": "^4.17.21",
+    "minimist": "^1.2.6",
+    "prompt": "^1.3.0",
+    "source-map-support": "^0.5.19",
+    "throw-expression": "^1.0.2"
+  },
+  "devDependencies": {
+    "@detachhead/eslint-config": "0.0.14",
+    "@trivago/prettier-plugin-sort-imports": "^3.2.0",
+    "@types/async": "^3.2.15",
+    "@types/lodash": "^4.14.182",
+    "@types/minimist": "^1.2.2",
+    "@types/node": "^16.10.5",
+    "@types/prompt": "^1.1.2",
+    "prettier": "^2.4.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.8.0-beta"
   }
 }
