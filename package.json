@@ -13,7 +13,7 @@
     "main": "npm run build && node dist/bin/issues-transfer.js"
   },
   "bin": {
-    "issues-transfer": "bin/issues-transfer.js"
+    "issues-transfer": "dist/bin/issues-transfer.js"
   },
   "repository": {
     "type": "git",
