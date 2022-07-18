@@ -1,8 +1,8 @@
 {
-  "name": "issues-transfer",
-  "version": "0.3.0",
+  "name": "@detachhead/issues-transfer",
+  "version": "0.4.0",
   "description": "Transfer issues from one Github repo to another",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "lint:check": "eslint . --ext .ts",
     "lint:fix": "npm run lint:check -- --fix",
@@ -17,19 +17,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:jeffandersen/issues-transfer.git"
+    "url": "git@github.com:detachhead/issues-transfer.git"
   },
   "keywords": [
     "github",
     "issues",
     "transfer"
   ],
-  "author": "Jeff Andersen <jeffandersen@gmail.com>",
+  "author": "detachhead <detachhead@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jeffandersen/issues-transfer/issues"
+    "url": "https://github.com/detachhead/issues-transfer/issues"
   },
-  "homepage": "https://github.com/jeffandersen/issues-transfer",
+  "homepage": "https://github.com/detachhead/issues-transfer",
   "dependencies": {
     "@detachhead/ts-helpers": "^11.2.0",
     "@octokit/rest": "^19.0.3",
