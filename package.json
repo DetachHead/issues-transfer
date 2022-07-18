@@ -15,6 +15,10 @@
   "bin": {
     "issues-transfer": "dist/bin/issues-transfer.js"
   },
+  "files": [
+    "dist",
+    "src"
+  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:detachhead/issues-transfer.git"
